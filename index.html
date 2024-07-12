@@ -3,294 +3,112 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="index.css">
-        <link href="imgs/user.png" rel="icon" type="image/png" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        <title> University Student Registration</title>
+        <link rel="icon" type="image/x-icon" href="images/std.png">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <title>My Portfolio</title>
+        <link rel="stylesheet" href="output.css">
     </head>
 
-    <body>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#Home">Home</a>
-                </li>
-                <li>
-                    <a href="#About">About</a>
-                </li>
-                <li>
-                    <a href="#Skills">Skills</a>
-                </li>
-                <li>
-                    <a href="#Experience">Experience</a>
-                </li>
-                <li>
-                    <a href="#Contact">Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="main">
-            <div class="info">
-                <div class="heading">
-                    <h1>
-                        Hello! I am Burhan
-                    </h1>
-                    <h4>I am a {Developer,UI Designer}</h4>
-                </div>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                    of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                    popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                    and more recently with desktop publishing software like Aldus PageMaker including versions of
-                    Lorem Ipsum.
-                </p>
-                <div class="sociallink">
-                    <a href="https://www.facebook.com/Starbucks" target="_blank"><i class="fab fa-facebook fa-2x me-2"
-                            style="color: #000;"></i></a>
-                    <a href="https://www.youtube.com/@starbucks" target="_blank"><i class="fab fa-github fa-2x mx-2"
-                            style="color: #000;"></i></a>
-                    <a href="https://www.instagram.com/starbucks/" target="_blank"><i
-                            class="fab fa-instagram fa-2x mx-2" style="color: #000;"></i></a>
-                    <a href="https://www.linkedin.com/company/starbucks/" target="_blank"><i
-                            class="fab fa-linkedin fa-2x ms-2" style="color: #000;"></i></a>
-                </div>
+    <body class="bg-customBlue text-white font-poppins">
+        <div class="m-auto w-fit">
+            <div class="flex justify-center">
+                <img src="./images/au.jpg" alt="Air University Logo" width="200">
+                <h1 class=" pt-20 text-4xl font-semibold">
+                    Air University
+                </h1>
             </div>
-            <div class="photoSection">
-                <div class="myphoto">
-                </div>
-            </div>
-        </div>
+            <div class="border border-white rounded-2xl p-10">
+                <h1 class="flex justify-center text-3xl font-semibold mb-10">
+                    Student Registration Form
+                </h1>
+                <form action="">
+                    <div class="space-y-7">
+                        <div class="flex justify-start">
+                            <label for="stdname">
+                                Student Name
+                            </label>
+                            <input name="stdname" type="text" required placeholder="Enter Your Name"
+                                class="ms-9 px-3 py-0.5  rounded-xl">
+                        </div>
+                        <div class="flex justify-start">
+                            <label for="FatherName">
+                                Father Name
+                            </label>
+                            <input name="FatherName" type="text" required placeholder="Enter Father Name"
+                                class="ms-11 px-3 py-0.5  rounded-xl">
+                        </div>
+                        <div class="flex justify-start">
+                            <label for="CNIC">
+                                CNIC
+                            </label>
+                            <input name="CNIC" type="number" required placeholder="Enter CNIC Number"
+                                class="ms-28 px-3 py-0.5  rounded-xl">
+                        </div>
+                        <div class="flex justify-start">
+                            <label for="Contact">
+                                Contact Number
+                            </label>
+                            <input name="Contact" type="tel" required placeholder="Enter Contact Number"
+                                class="ms-4 px-3 py-0.5 rounded-xl">
+                        </div>
+                        <div class="flex justify-start">
+                            <label for="Marks">
+                                FSC Marks
+                            </label>
+                            <input name="Marks" type="number" required placeholder="Out of 1100"
+                                class="ms-16 px-3 py-0.5  rounded-xl">
+                        </div>
+                        <div class="flex justify-start">
+                            <label for="EntryMarks">
+                                Entry Test Marks
+                            </label>
+                            <input name="EntryMarks" type="number" required placeholder="Enter Email"
+                                class="ms-6 px-3 py-0.5  rounded-xl">
+                        </div>
+                        <div class="flex justify-start">
+                            <label for="Gender">
+                                Gender
+                            </label>
+                            <input name="Gender" type="radio" required placeholder="Enter Email"
+                                class="ms-24 px-3 py-0.5  rounded-xl">
+                            Male
+                            <input name="Gender" type="radio" required placeholder="Enter Email"
+                                class="ms-24 px-3 py-0.5  rounded-xl">
+                            Female
+                        </div>
+                        <div class="flex justify-start">
+                            <label for="Remarks">
+                                Student Remarks
+                            </label>
+                            <textarea name="Remarks" class="ms-5 px-3 py-0.5  rounded-xl" required
+                                placeholder="Enter Email">
+                                    ad
+                                </textarea>
 
-        <section class="secondSection">
-            <div class="aboutphoto">
-                <img src="./imgs/aboutremovebg.png" alt="">
-            </div>
-            <div class="Aboutinfo">
-                <h1>About Me</h1>
-                <p>
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                    classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
-                    professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
-                    consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
-                    literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
-                    of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This
-                    book is a treatise on the theory of ethics, very popular during the Renaissance.
-                </p>
-                <button>
-                    Download CV
-                </button>
-            </div>
-        </section>
+                        </div>
+                        <div class="flex justify-start">
+                            <label for="Prefer">
+                                Student Prefernces
+                            </label>
+                            <select name="Prefer" class="text-black ms-4 px-6 py-0.5 rounded-xl">
+                                <option value="volvo">Engineering</option>
+                                <option value="saab">Medical</option>
+                                <option value="mercedes">Business</option>
+                                <option value="audi">Other</option>
+                            </select>
 
-        <div>
-            <div class="thirdheading">
-                <h1>What I do</h1>
-            </div>
-            <div class="AllCards">
-                <div class="card" style="width: 20rem;">
-                    <img src="imgs/ux-design.png" width="50" alt="Food Logo">
-                    <div>
-                        <h3 class="card-title">UI Designer</h3>
-                        <h5>$30 per Hour</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Totam
-                            atque.</p>
+                        </div>
+                        <div class=" flex justify-center">
+                            <button
+                                class="hover:text-black hover:bg-white py-1 px-24 border text-xl text-white rounded-full">
+                                Submit
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="card" style="width: 20rem;">
-                    <img src="imgs/software-developer.png" width="50" alt="Food Logo">
-                    <div>
-                        <h5 class="card-title">Web Developer</h5>
-                        <h5>$60 per Hour</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Totam
-                            atque.</p>
-                    </div>
-                </div>
-                <div class="card" style="width: 20rem;">
-                    <img src="imgs/deep-learning.png" width="50" alt="Food Logo">
-                    <div>
-                        <h5 class="card-title">Machine Learning</h5>
-                        <h5>$90 per Hour</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Totam
-                            atque.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="thirdheading">
-                <h1>Technical Skills</h1>
-            </div>
-            <div class="work">
-                <div class="card" style="padding: 4% 1%;">
-                    <div class="label">
-                        <p> C++/C</p>
-                        <p>95%</p>
-                    </div>
-                    <div class="contain">
-                        <div class="line" style="width: 18vw;"></div>
-                    </div>
-                    <div class="label">
-                        <p> JavaScript</p>
-                        <p>80%</p>
-                    </div>
-                    <div class="contain">
-                        <div class="line" style="width: 14vw;"></div>
-                    </div>
-                    <div class="label">
-                        <p> Matlab</p>
-                        <p>90%</p>
-                    </div>
-                    <div class="contain">
-                        <div class="line" style="width: 18vw;"></div>
-                    </div>
-                    <div class="label">
-                        <p> Python</p>
-                        <p>85%</p>
-                    </div>
-                    <div class="contain">
-                        <div class="line" style="width: 16vw;"></div>
-                    </div>
-                </div>
-                <div class="card" style="padding: 4% 1%;">
-                    <div class="label">
-                        <p> C++/C</p>
-                        <p>95%</p>
-                    </div>
-                    <div class="contain">
-                        <div class="line" style="width: 18vw;"></div>
-                    </div>
-                    <div class="label">
-                        <p> JavaScript</p>
-                        <p>80%</p>
-                    </div>
-                    <div class="contain">
-                        <div class="line" style="width: 14vw;"></div>
-                    </div>
-                    <div class="label">
-                        <p> Matlab</p>
-                        <p>90%</p>
-                    </div>
-                    <div class="contain">
-                        <div class="line" style="width: 18vw;"></div>
-                    </div>
-                    <div class="label">
-                        <p> Python</p>
-                        <p>85%</p>
-                    </div>
-                    <div class="contain">
-                        <div class="line" style="width: 16vw;"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="work">
-            <div class="card1">
-                <h1>Education</h1>
-                <div class="card" style="width: 25rem;">
-                    <div class="card-body">
-                        <h3 class="card-title">Degree : BS Computer Engineering</h3>
-                        <h5>University : Air University, Islamabad</h5>
-                        <p>2021 - 2025</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Totam
-                            atque.</p>
-                    </div>
-                </div>
-                <div class="card" style="width: 25rem;">
-                    <div class="card-body">
-                        <h3 class="card-title">Degree : BS Computer Engineering</h3>
-                        <h5>University : Air University, Islamabad</h5>
-                        <p>2021 - 2025</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Totam
-                            atque.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card1">
-                <h1>Experience</h1>
-                <div class="card" style="width: 25rem;">
-                    <div class="card-body">
-                        <h3 class="card-title">MERN Intern</h3>
-                        <h5>Company : TIERS Limited</h5>
-                        <p>June 2024 - August 2024</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Totam
-                            atque.</p>
-                    </div>
-                </div>
-                <div class="card" style="width: 25rem;">
-                    <div class="card-body">
-                        <h3 class="card-title">MERN Intern</h3>
-                        <h5>Company : TIERS Limited</h5>
-                        <p>June 2024 - August 2024</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Totam
-                            atque.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div>
-            <div class="thirdheading">
-                <h1>Contact Me</h1>
-            </div>
-            <div class="AllCards">
-                <div class="card" style="width: 20rem;">
-                    <img src="imgs/location.png" width="50" alt="Address Logo">
-                    <div class="card-body">
-                        <h3 class="card" style="font-size: larger;">Address</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-                <div class="card" style="width: 20rem;">
-                    <img src="imgs/email.png" width="50" alt="Email Logo">
-                    <div class="card-body">
-                        <h5 class="card" style="font-size: larger;">Email</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
-                <div class="card" style="width: 20rem;">
-                    <img src="imgs/phone.png" width="50" alt="Phone Logo">
-                    <div class="card-body">
-                        <h5 class="card" style="font-size: larger;">Contact</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </body>
-    <footer>
-        <form style="font-size: x-large; text-align: start; display: block; margin:0px auto; width: fit-content;">
-            <div style="border: 1px solid black;  text-align: center ;">
-                <div style="padding-bottom:10px">
-                    <label for="firstnamme">First Name</label>
-                    <input type="text" placeholder="Your First Name" name="firstnamme">
-                    <label for="lastname">Last Name</label>
-                    <input type="text" placeholder="Your Last Name" name="lastname">
-                </div>
-                <div style="padding-bottom:10px">
-                    <label for="email">Your Email</label>
-                    <input type="text" placeholder="Your Email Address" name="email" style="width: 476px;">
-                </div>
-                <div style="padding-bottom:10px">
-                    <label for="email">Your Message</label>
-                    <textarea name="msg" style=" width: 433px; ">Write here</textarea>
-                </div>
-                <button style="width: 600px;">Send</button>
-            </div>
-        </form>
-        <div class="ending">
-            <p>&copy; 2024 University of Education. All rights reserved.</p>
-        </div>
-    </footer>
 
 </html>

@@ -1,0 +1,98 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Student Registration</title>
+    <link rel="icon" type="image/x-icon" href="images/std.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="output.css" />
+  </head>
+
+  <body class="bg-customBlue text-white font-poppins">
+    <div class="m-auto w-fit">
+      <div class="flex justify-center">
+        <img src="./images/au.jpg" alt="Air University Logo" width="200" />
+        <h1 class="pt-20 text-4xl font-semibold">Air University</h1>
+      </div>
+      <div class="border border-white rounded-2xl p-10">
+        <h1 class="flex justify-center text-3xl font-semibold mb-10">
+          Student Registration Form
+        </h1>
+        <form action="">
+          <div class="space-y-7">
+            <div class="flex justify-start">
+              <label for="stdname"> Student Name </label>
+              <input
+                name="stdname"
+                type="text"
+                required
+                style="color: black"
+                placeholder="Enter Your Name"
+                class="ms-9 px-3 py-0.5 rounded-xl"
+              />
+            </div>
+            <div class="flex justify-start">
+              <label for="CNIC"> Roll Number </label>
+              <input
+                name="Roll"
+                type="number"
+                required
+                style="color: black"
+                placeholder="Enter Roll Number"
+                class="ms-20 px-3 py-0.5 rounded-xl"
+              />
+            </div>
+            <div class="flex justify-start">
+              <label for="Contact"> Matric Marks </label>
+              <input
+                id="MM"
+                name="Matric Marks"
+                type="number"
+                style="color: black"
+                required
+                placeholder="Out of 1100"
+                class="ms-4 px-3 py-0.5 rounded-xl"
+              />
+            </div>
+            <div class="flex justify-start">
+              <label for="Marks"> FSc Marks </label>
+              <input
+                id="FM"
+                name="FSc Marks"
+                type="number"
+                style="color: black"
+                required
+                placeholder="Out of 1100"
+                class="ms-16 px-3 py-0.5 rounded-xl"
+              />
+            </div>
+            <div class="flex justify-start">
+              <label for="EntryMarks"> Entry Test Marks </label>
+              <input
+                id="EM"
+                name="EntryMarks"
+                type="number"
+                style="color: black"
+                required
+                placeholder="Out of 100"
+                class="ms-6 px-3 py-0.5 rounded-xl"
+              />
+            </div>
+            <div class="flex justify-center">
+              <button
+                onclick="pushed()"
+                class="hover:text-black hover:bg-white py-1 px-24 border text-xl text-white rounded-full"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="Aggregate.js"></script>
+  </body>
+</html>
