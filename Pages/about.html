@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Page</title>
         <link rel="stylesheet" href="../output.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
     </head>
 
     <body class="border-b border-black mx-32">
@@ -16,7 +18,7 @@
                         <img src="../imgs/bird.png" alt="Company Logo" width="250">
                     </a>
                 </div>
-                <ul class="flex justify-between border w-2/4 my-auto text-xl border-black">
+                <ul class="flex justify-between w-2/4 my-auto text-xl">
                     <li class="border border-black px-3 py-1 rounded-lg hover:text-customPurple hover:bg-white">
                         <a href="/">
                             Home
@@ -41,11 +43,11 @@
             </div>
         </header>
         <section>
-            <div class="flex justify-around p-32">
+            <div class="flex justify-around px-32 py-20">
                 <img src="../imgs/p4.jpg" alt="About Picture" width="400">
 
-                <div class=" border border-black p-20">
-                    <h1 class="font-semibold text-4xl mb-5">
+                <div class="border border-black p-16">
+                    <h1 class="font-semibold text-4xl mb-5 ">
                         About Us
                     </h1>
                     <p class="text-lg">
@@ -56,9 +58,61 @@
                     </p>
                 </div>
             </div>
+            <div class="flex justify-around px-32">
+                <div class="border border-black p-20">
+                    <h1 class="font-semibold text-4xl mb-5">
+                        How it Begin
+                    </h1>
+                    <p class="text-lg">
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution of letters, as opposed to using 'Content here, content here', making it look like
+                        readable English.
+                    </p>
+                </div>
+                <img src="../imgs/p2.jpg" alt="About Picture" width="400">
+            </div>
         </section>
-        <footer>
-            footer
+        <footer class="flex justify-around mt-10 py-10 border-t border-black">
+            <div>
+                <h1 class="text-4xl">
+                    Get in Touch
+                </h1>
+                <div class="flex space-x-20 justify-between">
+                    <div>
+                        <h1 class="text-xl underline mb-2">Services</h1>
+                        <ul>
+                            <li>Web Development</li>
+                            <li>Machine Learning</li>
+                            <li>App Development</li>
+                            <li>UX/UI Design</li>
+                            <li>DevOps</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h1 class="text-xl underline mb-2">Help</h1>
+                        <ul>
+                            <li>Contact Us</li>
+                            <li>FAQ</li>
+                            <li>Downloads</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <h1 class=" text-2xl"> NewsLetter</h1>
+                <div class="text-lg">
+                    <input class="rounded-lg px-2 border border-black" type="text" placeholder="Enter Email Address">
+                    <button class="rounded-lg border py-0.5 px-5 border-black w-fit">Subscribe</button>
+                </div>
+                <div class="flex mt-2 space-x-2">
+                    <img src="../imgs/social.png" alt="Whats App Icon" width="40">
+                    <img src="../imgs/facebook.png" alt="Whats App Icon" width="40">
+                    <img src="../imgs/instagram.png" alt="Whats App Icon" width="40">
+                    <img src="../imgs/youtube (1).png" alt="Whats App Icon" width="40">
+                    <img src="../imgs/telegram.png" alt="Whats App Icon" width="40">
+                </div>
+            </div>
         </footer>
     </body>
 

@@ -8,20 +8,26 @@
         <link rel="icon" href="./imgs/shade.png">
         <link rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Sofia+Pro:wght@400;500;600;700&display=swap">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
         <link rel="stylesheet" href="./output.css">
     </head>
 
-    <body class="border-b border-black mx-32">
+    <body class="mx-32 ">
         <header>
-            <div class="flex justify-between border border-black">
+            <div class=" flex border-b border-black justify-between">
                 <div class="ps-14">
                     <a href="/">
                         <img src="./imgs/bird.png" alt="Company Logo" width="250">
                     </a>
                 </div>
-                <ul class="flex justify-between border w-2/4 my-auto text-xl border-black">
-                    <li class="border border-black px-3 py-1 rounded-lg hover:text-customPurple hover:bg-white">
+                <div class="space-y-2">
+                    <div class="w-8 h-0.5 bg-black"></div>
+                    <div class="w-8 h-0.5 bg-black"></div>
+                    <div class="w-8 h-0.5 bg-black"></div>
+                </div>
+                <ul class=" flex justify-between w-2/4 my-auto text-xl ">
+                    <li class="border border-black px-3 py-1 rounded-lg ">
                         <a href="/">
                             Home
                         </a>
@@ -45,8 +51,8 @@
             </div>
         </header>
         <section>
-            <div class="flex border border-black p-32">
-                <div class="w-1/2 m-auto border border-black">
+            <div class="flex p-32">
+                <div class="w-1/2 m-auto">
                     <h1 class="text-5xl font-semibold mb-5">
                         We're not your
                         ordinary graphic design studio.
@@ -56,17 +62,53 @@
                         eye-catching illustrations. Let's make your brand stand out together.
                     </p>
 
-                    <button
-                        class="text-lg mt-10 border border-black px-4 py-1 rounded-lg font-semibold hover:text-customPurple hover:bg-white">
+                    <button class="text-lg mt-10 border border-black px-4 py-1 rounded-lg font-semibold ">
                         Our Services
                     </button>
                 </div>
                 <img src="./imgs/p1.jpg" alt="Home Picture" width="500">
-
             </div>
         </section>
-        <footer class=" text-4xl border-t border-black">
-            Reach Us
+        <footer class="flex justify-around py-10 border-t border-black">
+            <div>
+                <h1 class="text-4xl">
+                    Get in Touch
+                </h1>
+                <div class="flex space-x-20 justify-between">
+                    <div>
+                        <h1 class="text-xl underline mb-2">Services</h1>
+                        <ul>
+                            <li>Web Development</li>
+                            <li>Machine Learning</li>
+                            <li>App Development</li>
+                            <li>UX/UI Design</li>
+                            <li>DevOps</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h1 class="text-xl underline mb-2">Help</h1>
+                        <ul>
+                            <li>Contact Us</li>
+                            <li>FAQ</li>
+                            <li>Downloads</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col">
+                <h1 class=" text-2xl"> NewsLetter</h1>
+                <div class="text-lg">
+                    <input class="rounded-lg px-2 border border-black" type="text" placeholder="Enter Email Address">
+                    <button class="rounded-lg border py-0.5 px-5 border-black w-fit">Subscribe</button>
+                </div>
+                <div class="flex mt-2 space-x-2">
+                    <img src="./imgs/social.png" alt="Whats App Icon" width="40">
+                    <img src="./imgs/facebook.png" alt="Whats App Icon" width="40">
+                    <img src="./imgs/instagram.png" alt="Whats App Icon" width="40">
+                    <img src="./imgs/youtube (1).png" alt="Whats App Icon" width="40">
+                    <img src="./imgs/telegram.png" alt="Whats App Icon" width="40">
+                </div>
+            </div>
         </footer>
     </body>
 

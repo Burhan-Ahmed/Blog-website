@@ -5,29 +5,106 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
-        <link rel="stylesheet" href="./output.css">
+        <link rel="stylesheet" href="../output.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     </head>
 
-    <body>
-        <div>
-            <form action="post" class="border border-black">
-                <div>
-                    <label for="Username">Email</label>
-                    <input type="text" name="Username" placeholder="Email Address">
+    <body class="mx-32">
+        <header>
+            <div class="flex justify-between border-b border-black">
+                <div class="ps-14">
+                    <a href="/">
+                        <img src="../imgs/bird.png" alt="Company Logo" width="250">
+                    </a>
                 </div>
-                <div>
+                <ul class="flex justify-between  w-2/4 my-auto text-xl">
+                    <li class="border border-black px-3 py-1 rounded-lg hover:text-customPurple hover:bg-white">
+                        <a href="/">
+                            Home
+                        </a>
+                    </li>
+                    <li class="border border-black px-3 py-1 rounded-lg hover:text-customPurple hover:bg-white">
+                        <a href="./Pages/about.html">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="border border-black px-3 py-1 rounded-lg hover:text-customPurple hover:bg-white">
+                        <a href="./Pages/services.html">
+                            Services
+                        </a>
+                    </li>
+                    <li class="border border-black px-3 py-1 rounded-lg hover:text-customPurple hover:bg-white">
+                        <a href="./Pages/login.html">
+                            Get a Quote
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="mt-12">
+            <form action="post"
+                class="w-4/12 m-auto mb-2 border text-center border-black py-12 px-10 rounded-lg space-y-5">
+                <h1 class="text-center font-semibold text-3xl mb-10">Sign Up</h1>
+                <div class="flex justify-between">
+                    <label for="Firstname">First Name</label>
+                    <input class="border rounded-md px-4" required type="text" name="Firstname"
+                        placeholder="Your First Name">
+                </div>
+                <div class="flex justify-between">
+                    <label for="Lastname">Last Name</label>
+                    <input class="border rounded-md px-4" required type="text" name="Lastname"
+                        placeholder="Your Last Name">
+                </div>
+                <div class="flex justify-between">
+                    <label for="DOF">Date of Birth</label>
+                    <input class="border rounded-md px-4" required type="date" name="DOF">
+                </div>
+                <div class="flex justify-between">
+                    <label for="email">Email</label>
+                    <input class="border rounded-md px-4" required type="email" name="email"
+                        placeholder="Enter Email Address">
+                </div>
+                <div class="flex justify-between">
                     <label for="pass">Password</label>
-                    <input type="password" name="pass" placeholder="Email Address">
+                    <input class="border rounded-md px-4" required type="password" name="pass"
+                        placeholder="Enter Password">
                 </div>
-                <button type="submit">
-                    Submit
+                <div class="flex justify-between">
+                    <label for="pass">Repeat Password</label>
+                    <input class="border rounded-md px-4" required type="password" name="pass"
+                        placeholder="Again Enter Password">
+                </div>
+                <button class="border border-black px-8 py-1 rounded-full" type="submit">
+                    Create Account
                 </button>
+                <div>
+                    ------- OR -------
+                </div>
+                <div class="flex justify-between">
+                    <div class="flex space-x-1 border border-black px-4 py-1 rounded-full">
+                        <a href="https://www.google.com/">
+                            Sign Up via Google
+                        </a>
+                        <img src="../imgs/icons8-google-480.png" alt="Google Icon" width="24">
+                    </div>
+                    <div class="flex space-x-1 border border-black px-4 py-1 rounded-full">
+                        <a href="www.github.com">
+                            Sign Up via Github
+                        </a>
+                        <img src="../imgs/icons8-github-400.png" alt="Google Icon" width="24">
+
+                    </div>
+                </div>
             </form>
-            Already have a Account?
-            <a href="./login.html">
-                Back to Login
-            </a>
+            <div>
+                Already a User? Back to
+                <a class="underline" href="./login.html">
+                    Login
+                </a>
+            </div>
+
         </div>
     </body>
+
 
 </html>
