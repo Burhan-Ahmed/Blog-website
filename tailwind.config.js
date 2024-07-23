@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         customPurple: '#110729',  // Define your custom colors here
       },
+      screens: {
+        small: '1110px',  // Define your custom colors here
+      },
     },
   },
   plugins: [],
