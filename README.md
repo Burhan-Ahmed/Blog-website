@@ -1,5 +1,6 @@
 # A Software House Website 
 A Final Project using HTML, CSS and Javascript during my Internship at TIERS Limited
+![alt text](./imgs/home.PNG)
 
 ## Languages
 - HTML
