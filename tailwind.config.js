@@ -1,13 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html"],
+  content: [
+    './*.html',
+  ],
   theme: {
     extend: {
       colors: {
-        customPurple: '#110729',  // Define your custom colors here
+        customPurple: '#110729',
       },
       screens: {
-        small: '1110px',  // Define your custom colors here
+        small: '1110px',
       },
     },
   },
