@@ -1,17 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
-    './*.html',
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        customPurple: '#110729',
-      },
-      screens: {
-        small: '1110px',
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }

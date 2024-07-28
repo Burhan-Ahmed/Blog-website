@@ -1,14 +1,8 @@
-# A Software House Website 
-A Final Project using HTML, CSS and Javascript during my Internship at TIERS Limited
-![alt text](./imgs/home.PNG)
+# React + Vite
 
-## Languages
-- HTML
-- Tailwind
-- Javascript
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Notes
-- Make sure to run `npx tailwindcss -i ./input.css -o ./output.css --watch` for tailwind
-<hr>
+Currently, two official plugins are available:
 
-- Nothing Much was to learn as I already knew these things
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

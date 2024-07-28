@@ -1,132 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Made It</title>
-        <link rel="icon" href="./imgs/shade.png">
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Sofia+Pro:wght@400;500;600;700&display=swap">
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Picker Project</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 
-        <link rel="stylesheet" href="./output.css">
-    </head>
+  </head>
 
-    <body class="mx-32">
-        <header>
-            <div class=" flex border-b border-black justify-between">
-                <div class="ps-14">
-                    <a href="/">
-                        <img src="./imgs/bird.png" alt="Company Logo" width="250">
-                    </a>
-                </div>
-                <div onclick="showNavBar()" class="space-y-2 small:hidden">
-                    <div class="w-8 h-0.5 bg-black"></div>
-                    <div class="w-8 h-0.5 bg-black"></div>
-                    <div class="w-8 h-0.5 bg-black"></div>
-                </div>
-                <ul class="small:flex hidden justify-between w-2/4 my-auto text-xl ">
-                    <li id="home" class=" border border-black px-3 py-1 rounded-lg ">
-                        <a href="/">
-                            Home
-                        </a>
-                    </li>
-                    <li class="border border-black px-3 py-1 rounded-lg ">
-                        <a href="./about.html">
-                            About Us
-                        </a>
-                    </li>
-                    <li class="border border-black px-3 py-1 rounded-lg ">
-                        <a href="./services.html">
-                            Services
-                        </a>
-                    </li>
-                    <li class="border border-black px-3 py-1 rounded-lg">
-                        <a href="./login.html">
-                            Get a Quote
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </header>
-        <section>
-            <div class="flex p-32 bg-customPurple text-white">
-                <div class="w-1/2 m-auto">
-                    <h1 class="text-5xl font-semibold mb-5">
-                        We're not your
-                        ordinary graphic design studio.
-                    </h1>
-                    <p class="text-xl" id="subhead">
-                        At our premier graphic design studio, we specialize in creating exceptional brand identities and
-                        captivating visuals
-                    </p>
-                    <button
-                        class="hover:bg-white hover:text-black text-lg mt-10 border border-white px-4 py-1 rounded-lg font-semibold ">
-                        <a href="./services.html">
-                            Our Services
-                        </a>
-                    </button>
-                </div>
-                <img src="./imgs/p1.jpg" alt="Home Picture" width="500">
-            </div>
-        </section>
-        <footer class="flex justify-around py-10 border-t border-black">
-            <div>
-                <h1 class="text-4xl">
-                    Get in Touch
-                </h1>
-                <div class="flex space-x-20 justify-between">
-                    <div>
-                        <h1 class="text-xl underline mb-2">Services</h1>
-                        <ul>
-                            <li>Web Development</li>
-                            <li>Machine Learning</li>
-                            <li>App Development</li>
-                            <li>UX/UI Design</li>
-                            <li>DevOps</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h1 class="text-xl underline mb-2">Help</h1>
-                        <ul>
-                            <li>Contact Us</li>
-                            <li>FAQ</li>
-                            <li>Downloads</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-col">
-                <label for="emailaddress" class=" text-2xl"> NewsLetter</label>
-                <div class="text-lg">
-                    <form action="/">
-                        <input required id="newsltr" name="emailaddress" class="rounded-lg px-2 border border-black"
-                            type="email" placeholder="Enter Email Address">
-                        <button onclick="subs()"
-                            class="rounded-lg border py-0.5 px-5 border-black w-fit">Subscribe</button>
-                    </form>
-                </div>
-                <div class="flex mt-2 space-x-2">
-                    <a href="https://web.whatsapp.com/">
-                        <img src="./imgs/social.png" alt="Whats App Icon" width="40">
-                    </a>
-                    <a href="https://www.facebook.com/">
-                        <img src="./imgs/facebook.png" alt="Facebook Icon" width="40">
-                    </a>
-                    <a href="https://www.instagram.com/">
-                        <img src="./imgs/instagram.png" alt="Instagram Icon" width="40">
-                    </a>
-                    <a href="https://www.youtube.com/">
-                        <img src="./imgs/youtube (1).png" alt="Youtube Icon" width="40">
-                    </a>
-                    <a href="https://telegram.org/">
-                        <img src="./imgs/telegram.png" alt="Telegram Icon" width="40">
-                    </a>
-                </div>
-            </div>
-        </footer>
-    </body>
-    <script src="home.js"></script>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 
 </html>
