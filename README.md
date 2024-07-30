@@ -1,8 +1,8 @@
-# Color-Picker
-Color Picker Project Done as an Internship task at TIERS
-![Alt text](./img/homePage.PNG)
+# React + Vite
 
-## Tools and Languages
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- React
-- Tailwind
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
