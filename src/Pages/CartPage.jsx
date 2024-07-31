@@ -1,11 +1,13 @@
 import React from "react";
-import NavBar from "./NavBar"
+import NavBar from "./headings/NavBar"
+import Footer from "./headings/footer";
 
 export default function CartPage() {
 
     return (
         <>
             <NavBar />
+
             <body class="font-poppins">
                 <div class="flex justify-center text-2xl mt-10 font-semibold">
                     <h1>Your Add to Cart</h1>
@@ -49,51 +51,7 @@ export default function CartPage() {
                 </div>
             </body>
 
-            <footer class="bg-cyan-600">
-                <div class="flex justify-around py-7">
-                    <div>
-                        <h1 class="flex justify-center text-xl font-semibold">
-                            E-COMMERCE STORE
-                        </h1>
-                        <p>
-                            At Our Ecommerce Store, we are passionate about providing exceptional products and an <br />
-                            unparalleled
-
-                            shopping experience. We strive to offer a curated selection of high-quality <br />
-                            items that meet the
-                            diverse
-                            needs and tastes of our valued customers.
-                        </p>
-                    </div>
-                    <div>
-                        <h1 class="font-semibold">
-                            LINKS
-                        </h1>
-                        <ul>
-                            <li>Home</li>
-                            <li> Products</li>
-                            <li> Cart</li>
-                            <li> Contact Us</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h1 class="font-semibold">
-                            LINKS
-                        </h1>
-                        <ul>
-                            <li>Facebook</li>
-                            <li> Instagram</li>
-                            <li> Twitter</li>
-                            <li> LinkedIn</li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <h5 class="flex justify-center">
-                        © 2020 Copyright: ecommerce-store.com
-                    </h5>
-                </div>
-            </footer>
+            <Footer />
         </>
     )
 }

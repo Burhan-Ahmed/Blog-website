@@ -1,4 +1,4 @@
-import NavBar from "./NavBar"
+import NavBar from "./headings/NavBar"
 
 export default function LoginPage() {
     return (

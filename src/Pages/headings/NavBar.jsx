@@ -4,14 +4,14 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 export default function NavBar() {
     return (
         <>
-            <nav className="bg-cyan-600 py-5">
-                <ul className="flex font-semibold justify-between text-xl">
-                    <div className="px-4 py-2">
+            <nav className="py-5 text-white" style={{ background: '#343A40' }}>
+                <ul className="flex font-semibold justify-between text-lg">
+                    <div className="px-4 py-2 text-2xl">
                         <li>
                             <Link to="/">E-Commerce Store</Link>
                         </li>
                     </div>
-                    <div className="flex space-x-1">
+                    <div className="flex space-x-4">
                         <li className="border px-4 py-2 rounded-xl">
                             <Link to="/">Home</Link>
                         </li>
@@ -34,7 +34,7 @@ export default function NavBar() {
                         </li>
                     </div>
                 </ul>
-            </nav>
+            </nav >
         </>
     )
 }
