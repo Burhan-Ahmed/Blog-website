@@ -1,10 +1,11 @@
 import NavBar from "./headings/NavBar"
 import Footer from "./headings/footer";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function Home() {
     const [data, setdata] = useState([])
+    const carouselRef = useRef(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -17,22 +18,39 @@ export default function Home() {
         fetchData();
     }, []);
 
+    const scrollLeft = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({
+                left: -carouselRef.current.clientWidth,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    const scrollRight = () => {
+        if (carouselRef.current) {
+            carouselRef.current.scrollBy({
+                left: carouselRef.current.clientWidth,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     return (
         <>
             <NavBar />
-
             <body className="font-poppins">
                 <div className="flex relative">
-                    <button className="absolute right-0" onClick="scrollRight()">
+                    <button className="absolute right-0" onClick={scrollRight}>
                         <img className="mt-72 rotate-180" src="./images/arrow.png" alt="Left Arrow" width="150" />
                     </button>
-                    <div className="overflow-x-scroll flex snap-mandatory snap-x w-full">
-                        <img src="../images/shop.jpg" alt="Landing Picture1" style={{ width: '100%', height: 'auto', display: 'block' }} />
-                        <img src="../images/yellow.jpg" alt="Landing Picture2" style={{ width: '100%', height: 'auto', display: 'block' }} />
-                        <img src="../images/ryan.jpg" alt="Landing Picture3" style={{ width: '100%', height: 'auto', display: 'block' }} />
-                        <img src="../images/hookle.jpg" alt="Landing Picture4" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                    <div className="overflow-x-auto flex" ref={carouselRef} style={{ scrollBehavior: 'smooth' }}>
+                        <img src="../images/shop.jpg" alt="Landing Picture1" />
+                        <img src="../images/yellow.jpg" alt="Landing Picture2" />
+                        <img src="../images/ryan.jpg" alt="Landing Picture3" />
+                        <img src="../images/hookle.jpg" alt="Landing Picture4" />
                     </div>
-                    <button className="absolute" onClick="scrollLeft()">
+                    <button className="absolute" onClick={scrollLeft}>
                         <img className=" mt-72" src="./images/arrow.png" alt="Right Arrow" width="150" />
                     </button>
                 </div>
