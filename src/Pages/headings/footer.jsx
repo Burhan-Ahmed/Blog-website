@@ -3,13 +3,13 @@ export default function Footer() {
 
     return (
         <>
-            <footer className="bg-cyan-600">
-                <div className="flex justify-around py-7">
+            <footer style={{ background: '#343A40' }}>
+                <div className="font-poppins flex justify-around py-7 text-white">
                     <div>
-                        <h1 className="flex justify-center text-xl font-semibold">
+                        <h1 className="flex justify-center text-xl font-medium">
                             E-COMMERCE STORE
                         </h1>
-                        <p>
+                        <p className="text-sm">
                             At Our Ecommerce Store, we are passionate about providing exceptional products and an <br />
                             unparalleled
                             shopping experience. We strive to offer a curated selection of high-quality <br />
@@ -19,10 +19,10 @@ export default function Footer() {
                         </p>
                     </div>
                     <div>
-                        <h1 className="font-semibold">
+                        <h1 className="font-medium text-xl">
                             LINKS
                         </h1>
-                        <ul>
+                        <ul className="text-sm">
                             <li>Home</li>
                             <li> Products</li>
                             <li> Cart</li>
@@ -30,10 +30,10 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <h1 className="font-semibold">
+                        <h1 className="font-medium text-xl">
                             LINKS
                         </h1>
-                        <ul>
+                        <ul className="text-sm">
                             <li>Facebook</li>
                             <li> Instagram</li>
                             <li> Twitter</li>
@@ -41,7 +41,7 @@ export default function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className="border-t">
+                <div className="border-t text-white text-sm">
                     <h5 className="flex justify-center">
                         © 2020 Copyright: ecommerce-store.com
                     </h5>
