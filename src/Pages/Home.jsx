@@ -22,14 +22,15 @@ export default function Home() {
             <NavBar />
 
             <body className="font-poppins">
-                <div className="flex relative ">
+                <div className="flex relative">
                     <button className="absolute right-0" onClick="scrollRight()">
                         <img className="mt-72 rotate-180" src="./images/arrow.png" alt="Left Arrow" width="150" />
                     </button>
                     <div className="overflow-x-scroll flex snap-mandatory snap-x w-full">
-                        <img src="./img1.png" alt="Landing Picture1" />
-                        <img src="./img2.png" alt="Landing Picture2" />
-                        <img src="./img3.png" alt="Landing Picture3" />
+                        <img src="../images/shop.jpg" alt="Landing Picture1" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                        <img src="../images/yellow.jpg" alt="Landing Picture2" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                        <img src="../images/ryan.jpg" alt="Landing Picture3" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                        <img src="../images/hookle.jpg" alt="Landing Picture4" style={{ width: '100%', height: 'auto', display: 'block' }} />
                     </div>
                     <button className="absolute" onClick="scrollLeft()">
                         <img className=" mt-72" src="./images/arrow.png" alt="Right Arrow" width="150" />
