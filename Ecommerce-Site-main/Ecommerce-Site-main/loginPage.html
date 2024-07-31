@@ -1,0 +1,107 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E-Commerce Store</title>
+        <link rel="shortcut icon" href="./images/E-commerce-icon.ico" type="image/x-icon">
+        <link href="output.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+
+    <header>
+        <nav class="bg-cyan-600 py-5 font-poppins">
+            <ul>
+                <div class="flex font-semibold justify-between text-xl">
+                    <div class="px-4 py-2">
+                        <li>
+                            <a href="/">
+                                E-Commerce Store
+                            </a>
+                        </li>
+                    </div>
+                    <div class="flex space-x-1">
+                        <li class="border px-4 py-2 rounded-xl">
+                            <a href="/">
+                                Home
+                            </a>
+                        </li>
+                        <li class="border px-4 py-2 rounded-xl">
+                            <a href="Products.html">
+                                Products
+                        </li>
+                        <li class="border px-4 py-2 rounded-xl">
+                            <a href="cartsPage.html">
+                                Cart
+                            </a>
+                        </li>
+                        <li class="border px-4 py-2 rounded-xl">
+                            <a href="contactPage.html">
+                                Contact Us
+                            </a>
+                        </li>
+                    </div>
+                    <div class="flex space-x-1">
+                        <li class="border px-4 py-2 rounded-xl">
+                            <a href="registerPage.html">
+                                Register
+                            </a>
+                        </li>
+                        <li class="border px-4 py-2 rounded-xl">
+                            <a href="loginPage.html">
+                                Login
+                            </a>
+                        </li>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+
+    <body class="bg-customBlue font-poppins text-black">
+        <div class="m-auto mt-20 w-fit">
+            <div class="border border-black rounded-2xl p-10">
+                <div class="mb-10">
+                    <h1 class="text-3xl flex justify-center font-semibold">
+                        LOGIN
+                    </h1>
+                    <p class="flex justify-center">Welcome Back!!!</p>
+                </div>
+                <form action="">
+                    <div class="space-y-7">
+                        <div class="flex justify-start">
+                            <label for="stdname">
+                                Enter Email
+                            </label>
+                            <input name="stdname" type="email" required placeholder="Enter Email Address"
+                                class="ms-14 px-3 py-0.5 rounded-xl border border-slate-300">
+                        </div>
+                        <div>
+                            <label for="pass">
+                                Password
+                            </label>
+                            <input name="pass" type="password" required placeholder="Enter Password"
+                                class="ms-16 px-3 py-0.5 rounded-xl border border-slate-300">
+                        </div>
+
+                        <div class=" flex justify-center">
+                            <button
+                                class="hover:text-white hover:bg-black py-1 px-24 border border-black text-xl rounded-full">
+                                Log In
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="flex justify-center">
+                    Don't Have Account?
+                    <a href="registerPage.html" class="mx-2 hover:underline text-blue-400">
+                        Signup
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+</html>
