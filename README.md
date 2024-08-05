@@ -7,3 +7,6 @@ An improved version of my perivous Ecommerce website
 - React
 - APIs (FakeStoreApi)
 - Tailwind
+
+### Run the Project
+`npm run dev`
