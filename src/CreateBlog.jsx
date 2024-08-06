@@ -14,7 +14,7 @@ export default function CreateBlog() {
         const existingData = JSON.parse(localStorage.getItem('blogData')) || [];
         existingData.push({ content: editorHtml });
         localStorage.setItem('blogData', JSON.stringify(existingData));
-        
+
     };
 
     return (
@@ -26,7 +26,7 @@ export default function CreateBlog() {
                         value={editorHtml}
                         onChange={handleChange}
                     />
-                    <button onClick={saveToLocalStorage} className='bg-blue-400 text-white font-medium mt-24 right-5 border border-black px-4 py-1 rounded-lg'>
+                    <button onClick={saveToLocalStorage} className='bg-green-300  font-medium mt-24 right-5 border border-black px-6 py-1 rounded-lg'>
                         Submit
                     </button>
                 </div>
