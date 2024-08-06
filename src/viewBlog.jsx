@@ -1,13 +1,21 @@
 import './App.css'
 import work from '../data.json'
 import NavBar from './NavBar';
+import React, { useEffect, useState } from 'react';
+
 
 export default function ViewBlog() {
+  const [blogs, setBlogs] = useState([]);
 
+  useEffect(() => {
+    const blogData = JSON.parse(localStorage.getItem('blogData')) || [];
+    setBlogs(blogData);
+  }, []);
   return (
     <>
       <main className='mx-52'>
         <NavBar />
+
         <div className='flex pt-5'>
           <div>
             {work.map(log => (
@@ -21,16 +29,16 @@ export default function ViewBlog() {
             ))}
           </div>
           <div className=' w-full mt-4'>
-            {work.map(log => (
-              <div key={log.id} className='space-y-4 px-10 py-4'>
-                <div className='flex'>
-                  <img src="news.png" alt="Image" width={100} />
-                  <div>
-                    <h1 className='font-bold text-lg p-5'>{log.City}</h1>
-                  </div>
+            {blogs.length > 0 ? (
+              blogs.map((blog, index) => (
+                <div key={index} className='border border-gray-400 p-4 mb-4 rounded-lg'>
+                  <div dangerouslySetInnerHTML={{ __html: blog.content }} />
                 </div>
-              </div>
-            ))}
+              ))
+            ) : (
+              <p>No blogs found.</p>
+            )}
+
           </div>
         </div>
       </main>

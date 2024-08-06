@@ -6,7 +6,6 @@ import 'react-quill/dist/quill.snow.css';
 export default function CreateBlog() {
     const [editorHtml, setEditorHtml] = useState('');
 
-    // Removed the incorrect setJsonData function
     const handleChange = (value) => {
         setEditorHtml(value);
     };
@@ -15,15 +14,15 @@ export default function CreateBlog() {
         const existingData = JSON.parse(localStorage.getItem('blogData')) || [];
         existingData.push({ content: editorHtml });
         localStorage.setItem('blogData', JSON.stringify(existingData));
+        
     };
 
-    // Moved return statement inside the component function
     return (
         <>
             <div className='mx-52'>
                 <NavBar />
                 <div className='mx-24 '>
-                    <ReactQuill className='mt-10 h-24'
+                    <ReactQuill className='mt-10 h-full'
                         value={editorHtml}
                         onChange={handleChange}
                     />
