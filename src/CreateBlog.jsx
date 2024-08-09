@@ -4,32 +4,89 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 
 export default function CreateBlog() {
-    const [editorHtml, setEditorHtml] = useState('');
+    const [name, setName] = useState('');
+    const [city, setCity] = useState('');
+    const [descrip, setDescrip] = useState('');
+    const [img, setImg] = useState(null);
 
-    const handleChange = (value) => {
-        setEditorHtml(value);
+    const handleFileChange = (event) => {
+        setImg(event.target.files[0]);
     };
 
-    const saveToLocalStorage = () => {
-        const existingData = JSON.parse(localStorage.getItem('blogData')) || [];
-        existingData.push({ content: editorHtml });
-        localStorage.setItem('blogData', JSON.stringify(existingData));
+    const handleSubmit = (event) => {
+        event.preventDefault();
 
+        if (!img) {
+            console.error('Please select an image.');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('city', city);
+        formData.append('descrip', descrip);
+        formData.append('img', img);
+
+        fetch('http://localhost:4000/CreateBlog', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => console.log('Success:', data))
+            .catch(error => console.error('Error:', error));
     };
 
     return (
         <>
             <div className='mx-52'>
                 <NavBar />
-                <div className='mx-24 '>
-                    <ReactQuill className='mt-10 h-full'
-                        value={editorHtml}
-                        onChange={handleChange}
-                    />
-                    <button onClick={saveToLocalStorage} className='bg-green-300  font-medium mt-24 right-5 border border-black px-6 py-1 rounded-lg'>
+                <form className='mx-24' onSubmit={handleSubmit} encType="multipart/form-data">
+                    <div className='mb-4'>
+                        <label htmlFor="name">Name:</label>
+                        <ReactQuill
+                            className='h-full'
+                            value={name}
+                            placeholder='Enter your Name'
+                            onChange={setName}
+                            modules={{ toolbar: false }}
+                        />
+                    </div>
+                    <div className='mb-4'>
+                        <label htmlFor="city">City:</label>
+                        <ReactQuill
+                            className='h-full'
+                            value={city}
+                            placeholder='Enter your City'
+                            onChange={setCity}
+                            modules={{ toolbar: false }}
+                        />
+                    </div>
+                    <div className='mb-4 space-x-3'>
+                        <label htmlFor="image">Image:</label>
+                        <input type="file" name="img" onChange={handleFileChange} />
+                    </div>
+                    <div className='mb-4'>
+                        <label htmlFor="info">Description:</label>
+                        <ReactQuill
+                            className='h-full'
+                            value={descrip}
+                            placeholder='Enter Description'
+                            onChange={setDescrip}
+                            modules={{ toolbar: false }}
+                        />
+                    </div>
+                    <button
+                        type="submit"
+                        className='bg-green-400 font-medium mt-24 right-5 border border-black px-6 py-1 rounded-lg'
+                    >
                         Submit
                     </button>
-                </div>
+                </form>
             </div>
         </>
     );
