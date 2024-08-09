@@ -6,6 +6,7 @@ import 'react-quill/dist/quill.snow.css';
 export default function CreateBlog() {
     const [name, setName] = useState('');
     const [city, setCity] = useState('');
+    const [email, setEmail] = useState('');
     const [descrip, setDescrip] = useState('');
     const [img, setImg] = useState(null);
 
@@ -13,17 +14,18 @@ export default function CreateBlog() {
         setImg(event.target.files[0]);
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-
+    const handleSubmit = () => {
         if (!img) {
             console.error('Please select an image.');
             return;
         }
 
+        setLoading(true);
+
         const formData = new FormData();
         formData.append('name', name);
         formData.append('city', city);
+        formData.append('email', email);
         formData.append('descrip', descrip);
         formData.append('img', img);
 
@@ -37,9 +39,16 @@ export default function CreateBlog() {
                 }
                 return response.json();
             })
-            .then(data => console.log('Success:', data))
-            .catch(error => console.error('Error:', error));
+            .then(data => {
+                console.log('Success:', data);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                setLoading(false);
+            });
     };
+
 
     return (
         <>
@@ -53,6 +62,16 @@ export default function CreateBlog() {
                             value={name}
                             placeholder='Enter your Name'
                             onChange={setName}
+                            modules={{ toolbar: false }}
+                        />
+                    </div>
+                    <div className='mb-4'>
+                        <label htmlFor="email">Email:</label>
+                        <ReactQuill
+                            className='h-full'
+                            value={email}
+                            placeholder='Enter your Email'
+                            onChange={setEmail}
                             modules={{ toolbar: false }}
                         />
                     </div>

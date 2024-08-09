@@ -1,33 +1,35 @@
 const express = require('express');
 const multer = require('multer');
-const path = require('path');
-const router = express.Router();
+const router = express.Router()
+const { transport } = require('../nodemailer/autogenerateMail')
 
-// Set up multer storage
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'uploads/'); // Ensure this directory exists or change it
+        cb(null, './public/images/');
     },
     filename: function (req, file, cb) {
-        cb(null, Date.now() + path.extname(file.originalname));
+        cb(null, Date.now() + file.originalname);
     }
 });
 
 const upload = multer({ storage: storage });
 
-// Handling POST request to /CreateBlog
 router.post('/', upload.single('img'), (req, res) => {
-    // Log the form data and file information
+    const data = req.body.name
+    const email = req.body.email
+    console.log(data)
     console.log(req.body);
-    console.log(req.file); // The uploaded file information
-
-    // Check if the image file was uploaded
+    console.log(req.file);
     if (!req.file) {
         return res.status(400).json({ error: 'No file uploaded' });
     }
-
-    // Respond with a success message
-    res.json({ message: 'Blog created successfully' });
+    res.send('Blog created successfully');
+    const mailoption = {
+        from: `BLOG Site <burhan.ahmed60090@gmail.com>`,
+        to: email,
+        subject: 'Your Blog Has been Published',
+        text: 'Your Blog Has been Published. Congratulations'
+    }
 });
 
-module.exports = router;
+module.exports = router
