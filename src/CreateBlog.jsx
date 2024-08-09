@@ -14,19 +14,29 @@ export default function CreateBlog() {
         setImg(event.target.files[0]);
     };
 
-    const handleSubmit = () => {
+    const stripHtmlTags = (html) => {
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        return doc.body.textContent || "";
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
         if (!img) {
             console.error('Please select an image.');
             return;
         }
 
-        setLoading(true);
+        const strippedName = stripHtmlTags(name);
+        const strippedCity = stripHtmlTags(city);
+        const strippedEmail = stripHtmlTags(email);
+        const strippedDescrip = stripHtmlTags(descrip);
 
         const formData = new FormData();
-        formData.append('name', name);
-        formData.append('city', city);
-        formData.append('email', email);
-        formData.append('descrip', descrip);
+        formData.append('name', strippedName);
+        formData.append('city', strippedCity);
+        formData.append('email', strippedEmail);
+        formData.append('descrip', strippedDescrip);
         formData.append('img', img);
 
         fetch('http://localhost:4000/CreateBlog', {
@@ -39,14 +49,6 @@ export default function CreateBlog() {
                 }
                 return response.json();
             })
-            .then(data => {
-                console.log('Success:', data);
-                setLoading(false);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                setLoading(false);
-            });
     };
 
 

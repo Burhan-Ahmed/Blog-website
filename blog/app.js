@@ -7,7 +7,6 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var Create_Blog = require('./routes/register');
-var DB = require('./Databse/sql');
 
 var app = express();
 
