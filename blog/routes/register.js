@@ -1,8 +1,12 @@
 const express = require('express');
 const multer = require('multer');
 const router = express.Router()
+const cors = require('cors');
 //const { transport } = require('../nodemailer/autogenerateMail')
 const mysql = require('mysql');
+
+
+router.use(cors());
 
 const connection = mysql.createConnection({
     host: 'bdh0bdhvmqlpks8bprtp-mysql.services.clever-cloud.com',
@@ -31,6 +35,7 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
+
 
 router.post('/', upload.single('img'), (req, res) => {
     const name = req.body.name;
