@@ -10,7 +10,7 @@ export default function ViewBlog() {
   useEffect(() => {
     async function getdata() {
       try {
-        const response = await fetch('http://localhost:4000/getuser');
+        const response = await fetch('https://celestial-furry-yogurt.glitch.me/getuser');
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
